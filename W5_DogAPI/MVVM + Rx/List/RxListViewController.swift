@@ -20,13 +20,21 @@ class RxListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         bindingViewModel()
     }
     
     func bindingViewModel() {
-        
+//        viewModel.dogListRelay
+//            .subscribe(onNext: { dog in
+//                print(dog)
+//            }).disposed(by: disposeBag)
+
         viewModel.dogListRelay
-            .bind(to: listTableView.rx.items(cellIdentifier: "RxCell")) { _,dog,cell in
+            .bind(to: listTableView.rx.items(cellIdentifier: "RxCell")) { _, dog, cell in
                 cell.textLabel?.text = dog
             }.disposed(by: disposeBag)
         

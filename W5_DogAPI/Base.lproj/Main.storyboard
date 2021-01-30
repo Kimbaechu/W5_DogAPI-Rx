@@ -102,7 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rx Dog Breeds" id="ggJ-kz-ZlZ"/>
                     <connections>
-                        <outlet property="listTableView" destination="Tqj-lR-01Y" id="968-7X-hqv"/>
+                        <outlet property="listTableView" destination="Tqj-lR-01Y" id="PuQ-pf-7CA"/>
                         <segue destination="Gbs-zP-Blj" kind="show" id="dh3-FD-yXl"/>
                     </connections>
                 </viewController>
@@ -295,8 +295,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7gR-P7-XCT" kind="relationship" relationship="viewControllers" id="AtM-cy-0es"/>
                         <segue destination="dfU-6J-3lj" kind="relationship" relationship="viewControllers" id="wiQ-qe-qkj"/>
+                        <segue destination="7gR-P7-XCT" kind="relationship" relationship="viewControllers" id="AtM-cy-0es"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIz-3L-w15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
