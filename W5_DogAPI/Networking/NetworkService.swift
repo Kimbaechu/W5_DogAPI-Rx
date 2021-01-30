@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 enum APIError: Error {
     case response
@@ -41,3 +42,5 @@ struct NetworkService {
             }
     }
 }
+
+

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2550BFB925C559D100012AD8 /* RxNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550BFB825C559D100012AD8 /* RxNetworkService.swift */; };
+		2550BFC125C55A3800012AD8 /* RxListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550BFC025C55A3800012AD8 /* RxListViewController.swift */; };
+		2550BFC425C55A4400012AD8 /* RxListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550BFC325C55A4400012AD8 /* RxListViewModel.swift */; };
+		2550BFC725C55A4B00012AD8 /* RxImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550BFC625C55A4B00012AD8 /* RxImageViewModel.swift */; };
+		2550BFCA25C55A5300012AD8 /* RxImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550BFC925C55A5300012AD8 /* RxImageViewController.swift */; };
 		25F1AD6E25C3CACB000A67B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1AD6D25C3CACB000A67B7 /* AppDelegate.swift */; };
 		25F1AD7025C3CACB000A67B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1AD6F25C3CACB000A67B7 /* SceneDelegate.swift */; };
 		25F1AD7225C3CACB000A67B7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F1AD7125C3CACB000A67B7 /* ListViewController.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2550BFB825C559D100012AD8 /* RxNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNetworkService.swift; sourceTree = "<group>"; };
+		2550BFC025C55A3800012AD8 /* RxListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxListViewController.swift; sourceTree = "<group>"; };
+		2550BFC325C55A4400012AD8 /* RxListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxListViewModel.swift; sourceTree = "<group>"; };
+		2550BFC625C55A4B00012AD8 /* RxImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImageViewModel.swift; sourceTree = "<group>"; };
+		2550BFC925C55A5300012AD8 /* RxImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImageViewController.swift; sourceTree = "<group>"; };
 		25F1AD6A25C3CACB000A67B7 /* W5_DogAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W5_DogAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F1AD6D25C3CACB000A67B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25F1AD6F25C3CACB000A67B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +66,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2550BFBB25C559D400012AD8 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				25F1AD8E25C3F2A3000A67B7 /* ViewController */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		2550BFBC25C559E800012AD8 /* MVVM + Rx */ = {
+			isa = PBXGroup;
+			children = (
+				2550BFBE25C55A2A00012AD8 /* List */,
+				2550BFBF25C55A2D00012AD8 /* Image */,
+			);
+			path = "MVVM + Rx";
+			sourceTree = "<group>";
+		};
+		2550BFBE25C55A2A00012AD8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2550BFC325C55A4400012AD8 /* RxListViewModel.swift */,
+				2550BFC025C55A3800012AD8 /* RxListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2550BFBF25C55A2D00012AD8 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2550BFC625C55A4B00012AD8 /* RxImageViewModel.swift */,
+				2550BFC925C55A5300012AD8 /* RxImageViewController.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		25F1AD6125C3CACB000A67B7 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +122,10 @@
 		25F1AD6C25C3CACB000A67B7 /* W5_DogAPI */ = {
 			isa = PBXGroup;
 			children = (
-				25F1AD8F25C3F2A9000A67B7 /* Model */,
-				25F1AD8E25C3F2A3000A67B7 /* ViewController */,
 				25F1AD8825C3CD1E000A67B7 /* Networking */,
+				25F1AD8F25C3F2A9000A67B7 /* Model */,
+				2550BFBB25C559D400012AD8 /* MVC */,
+				2550BFBC25C559E800012AD8 /* MVVM + Rx */,
 				25F1AD6D25C3CACB000A67B7 /* AppDelegate.swift */,
 				25F1AD6F25C3CACB000A67B7 /* SceneDelegate.swift */,
 				25F1AD7325C3CACB000A67B7 /* Main.storyboard */,
@@ -94,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				25F1AD8925C3CD29000A67B7 /* NetworkService.swift */,
+				2550BFB825C559D100012AD8 /* RxNetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -239,10 +286,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				25F1AD7225C3CACB000A67B7 /* ListViewController.swift in Sources */,
+				2550BFB925C559D100012AD8 /* RxNetworkService.swift in Sources */,
 				25F1AD6E25C3CACB000A67B7 /* AppDelegate.swift in Sources */,
+				2550BFC425C55A4400012AD8 /* RxListViewModel.swift in Sources */,
 				25F1AD8A25C3CD29000A67B7 /* NetworkService.swift in Sources */,
 				25F1AD7025C3CACB000A67B7 /* SceneDelegate.swift in Sources */,
+				2550BFC725C55A4B00012AD8 /* RxImageViewModel.swift in Sources */,
 				25F1AD9225C3F2D4000A67B7 /* ImageViewController.swift in Sources */,
+				2550BFC125C55A3800012AD8 /* RxListViewController.swift in Sources */,
+				2550BFCA25C55A5300012AD8 /* RxImageViewController.swift in Sources */,
 				25F1AD8625C3CD0E000A67B7 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
