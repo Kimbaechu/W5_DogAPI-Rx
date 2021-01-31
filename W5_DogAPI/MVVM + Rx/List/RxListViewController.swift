@@ -19,23 +19,20 @@ class RxListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.setupData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.setupData()
         bindingViewModel()
     }
     
+    
     func bindingViewModel() {
-//        viewModel.dogListRelay
-//            .subscribe(onNext: { dog in
-//                print(dog)
-//            }).disposed(by: disposeBag)
-
         viewModel.dogListRelay
-            .bind(to: listTableView.rx.items(cellIdentifier: "RxCell")) { _, dog, cell in
-                cell.textLabel?.text = dog
+            .bind(to: listTableView.rx.items(cellIdentifier: "RxCell", cellType: RxCell.self)) { _, dog, cell in
+                cell.dogLabel.text = dog
             }.disposed(by: disposeBag)
         
         listTableView.rx.modelSelected(String.self)
@@ -48,4 +45,7 @@ class RxListViewController: UIViewController {
     }
 }
 
-
+class RxCell: UITableViewCell {
+    @IBOutlet weak var dogLabel: UILabel!
+    
+}

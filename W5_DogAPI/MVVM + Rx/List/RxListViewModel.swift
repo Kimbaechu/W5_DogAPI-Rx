@@ -12,7 +12,7 @@ import RxRelay
 class RxListViewModel {
     
     var dogList = [String]()
-    let dogListRelay = PublishRelay<[String]>()
+    let dogListRelay = BehaviorRelay<[String]>(value: [])
     let disposeBag = DisposeBag()
     
     func setupData() {
