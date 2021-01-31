@@ -19,15 +19,9 @@ class RxListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         viewModel.setupData()
         bindingViewModel()
     }
-    
     
     func bindingViewModel() {
         viewModel.dogListRelay
