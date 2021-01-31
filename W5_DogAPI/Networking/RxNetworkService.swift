@@ -10,7 +10,6 @@ import RxSwift
 
 struct RxNetworkService {
     static func loadData<T: Codable>(type: URLType) -> Single<T> {
-        print(#function)
         guard let url = URL(string: type.makeURL) else { return Observable.error(NSError(domain: "url generation error", code: -1, userInfo: nil)).asSingle() }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

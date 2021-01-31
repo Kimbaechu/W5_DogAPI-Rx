@@ -16,7 +16,6 @@ class RxListViewModel {
     let disposeBag = DisposeBag()
     
     func setupData() {
-        print("RxSetup")
         let result: Single<DogList> = RxNetworkService.loadData(type: .list)
         result.subscribe { [weak self] event in
             guard let self = self else { return }
