@@ -33,7 +33,7 @@ class RxListViewController: UIViewController {
             .subscribe(onNext: {string in
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyBoard.instantiateViewController(identifier: "RxImageViewController") as! RxImageViewController
-                vc.viewModel.dog = string
+                vc.viewModel.breed = string
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
